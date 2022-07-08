@@ -24,26 +24,6 @@
     --blue: #57cbff;
     --font-sans: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
     --font-mono: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
-    --fz-xxs: 12px;
-    --fz-xs: 13px;
-    --fz-sm: 14px;
-    --fz-md: 16px;
-    --fz-lg: 18px;
-    --fz-xl: 20px;
-    --fz-xxl: 22px;
-    --fz-heading: 32px;
-    --border-radius: 4px;
-    --nav-height: 100px;
-    --nav-scroll-height: 70px;
-    --tab-height: 42px;
-    --tab-width: 120px;
-    --easing: cubic-bezier(0.645,0.045,0.355,1);
-    --transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
-    --hamburger-width: 30px;
-    --ham-before: top 0.1s ease-in 0.25s,opacity 0.1s ease-in;
-    --ham-before-active: top 0.1s ease-out,opacity 0.1s ease-out 0.12s;
-    --ham-after: bottom 0.1s ease-in 0.25s,transform 0.22s cubic-bezier(0.55,0.055,0.675,0.19);
-    --ham-after-active: bottom 0.1s ease-out,transform 0.22s cubic-bezier(0.215,0.61,0.355,1) 0.12s;
     --h1-size:80px;
 }
 
@@ -66,6 +46,7 @@
 
 .navigation-logo{
     color:var(--green);
+    padding:10px;
 }
 
 .navigation-bar nav ul{
@@ -100,7 +81,10 @@
     margin:5px 10px
 }
 
+
 .social-bar-left{
+    position:relative;
+    top:20em;
     display:flex;
     flex-direction:column;
     align-items:center;
@@ -130,6 +114,8 @@
 
 .email-bar-right{
     display:flex;
+    position:relative;
+    top:20em;
     flex-direction:column;
     align-items:center;
     justify-content: space-between;
@@ -150,12 +136,14 @@
 .home-container{
     display:flex;
     flex-direction:column;
+    justify-content: space-around;
+    height:80vh;
     align-items:center;
+    margin-top:90px;
 }
 
 
 .home-text-container{
-
 }   
 
 .home-text-container h4:nth-child(1){
@@ -169,7 +157,7 @@
     font-size:var(--h1-size);
     color:var(--lightest-slate);
     margin-top:10px;
-    max-width:100%;
+    width:100%;
 }
 
 .home-text-container h1:nth-child(3){
@@ -195,7 +183,7 @@
 /* ABOUT SECTION */
 
 .about-container{
-    margin-top:300px;
+    margin-top:100px;
 }
 
 .about-container h2{
@@ -255,6 +243,12 @@
     padding-left:5px;
     font-family:'Actor',sans-serif;
     font-weight:200;
+}
+
+.about-image-container img{
+    max-width:400px;
+    width:100%;
+    border-radius:8px;
 }
 
 /* PROJECT SECTION */
@@ -459,13 +453,15 @@
     color:var(--lightest-slate);
     font-size:48px;
     margin-top:20px;
+    text-align: center;
 }
 
 .contact-container h4:nth-child(3){
     color:var(--light-slate);
     font-weight: 200;
     font-family:'Poppins';
-    width:600px;
+    max-width:600px;
+    width:100%;
     margin:20px 0px;
 }
 
@@ -476,4 +472,102 @@
     justify-content:center;
     margin-top:100px;
     color:var(--light-slate);
+}
+
+/* START OF MEDIA QUERIES */
+
+@media(max-width:1055px){
+    .section-container{
+        width:100%;
+        max-width:768px;
+    }
+    
+    .home-text-container h1:nth-child(2){
+        font-size:70px;
+    }
+    
+    .home-text-container h1:nth-child(3){
+        font-size:70px;
+    }
+    
+
+    .about-text-container{
+        max-width:500px;
+        width:80%;
+    }
+
+    .about-items-container{
+        grid-template-columns:repeat(2, 200px);
+    }
+
+    .other-project-bar{
+        display:flex;
+        flex-direction:column;
+        margin-top:50px;
+    }
+
+    .other-project{
+        height:300px;
+        width:600px;
+    }
+}
+
+@media(max-width:768px){
+    .navigation-bar{
+        display:none;
+    }
+    .section-container{
+        width:100%;
+        max-width:340px;
+    }
+
+    .home-container{
+        margin-top:90px;
+    }
+
+    .home-text-container h1:nth-child(2){
+        font-size:48px;
+    }
+    
+    .home-text-container h1:nth-child(3){
+        font-size:48px;
+    }
+
+    .about-bar{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .about-text-container{
+        max-width:500px;
+        width:100%;
+        height:400px;
+    }
+
+    .project-bar{
+        margin-top:50px;
+        display:flex;
+        flex-direction:column;
+        justify-content: space-between;
+    }
+    
+    .project-text-container{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-around;
+        text-align:end;
+        max-width:600px;
+        width:100%;
+    }
+    .other-project{
+        height:300px;
+        width:300px;
+    }
+
+    .contact-container h4:nth-child(3){
+        max-width:300px;
+        width:100%;
+    }
+
 }
