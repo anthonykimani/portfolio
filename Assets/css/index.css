@@ -438,3 +438,42 @@
     margin: 0px auto;
     background-color: var(--dark-slate);
 }
+
+
+/* CONTACT SECTION */
+
+.contact-container{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    align-items:center;
+}
+
+.contact-container h4:nth-child(1){
+    color:var(--green);
+    font-weight: 200;
+    margin-top:30px;
+}
+
+.contact-container h1{
+    color:var(--lightest-slate);
+    font-size:48px;
+    margin-top:20px;
+}
+
+.contact-container h4:nth-child(3){
+    color:var(--light-slate);
+    font-weight: 200;
+    font-family:'Poppins';
+    width:600px;
+    margin:20px 0px;
+}
+
+/* FOOTER SECTION */
+
+.footer-container{
+    display:flex;
+    justify-content:center;
+    margin-top:100px;
+    color:var(--light-slate);
+}
