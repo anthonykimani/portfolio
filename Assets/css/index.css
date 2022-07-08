@@ -257,24 +257,24 @@
     font-weight:200;
 }
 
-/* PROJECT SECTION */
+/* BLOG SECTION */
 
-.project-container{
+.blog-container{
     margin-top:100px;
 }
 
-.project-container h2{
+.blog-container h2{
     font-family: var(--font-mono);
     color:var(--lightest-slate);
 }
 
-.project-container h2 span{
+.blog-container h2 span{
     color:var(--green);
     font-weight:200;
     font-family:var(--font-sans);
 }
 
-.project-bar{
+.blog-bar{
     display:flex;
     justify-content: space-between;
 }
@@ -286,7 +286,7 @@
     height: 1px;
     position:relative;
     bottom:15px;
-    left:-50px;
+    left:-40px;
     margin: 0px auto;
     background-color: var(--dark-slate);
 }
