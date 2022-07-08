@@ -62,6 +62,11 @@
 .navigation-bar nav ul li a{
     text-decoration:none;
     color:var(--light-slate);
+    transition:.3s ease-in-out;
+}
+
+.navigation-bar nav ul li a:hover{
+    color:var(--green)
 }
 
 .navigation-bar nav ul li a span{
@@ -75,6 +80,10 @@
     padding:20px 30px;
     border-radius:var(--border-radius);
     margin:5px 0px;
+}
+
+.generic-button:hover{
+    background-color:var(--green-tint);
 }
 
 .resume-button{
@@ -103,6 +112,10 @@
     color:var(--light-slate);
 }
 
+.social-bar-left div i:hover{
+    color:var(--green);
+}
+
 .line{
     content: "";
     display: block;
@@ -127,6 +140,14 @@
 .email-bar-right a{
     transform:rotate(90deg);
     color:var(--light-slate);
+}
+
+.email-bar-right a:hover{
+    color:var(--green);
+}
+
+.email-bar-right i:hover{
+    color:var(--green);
 }
 
 
@@ -330,6 +351,10 @@
     color:var(--lightest-slate);
 }
 
+.link-tags a:hover{
+    color:var(--green);
+}
+
 /* OTHER PROJECTS CONTAINER */
 
 .other-project-container{
@@ -368,6 +393,12 @@
     flex-direction: column;
     justify-content:space-between;
     padding:30px;
+    transition:.3s ease-in-out;
+}
+
+.other-project:hover{
+    position:relative;
+    bottom:5px;
 }
 
 .other-project div{
@@ -381,6 +412,10 @@
 
 .other-project div a i{
     color:var(--lightest-slate);
+}
+
+.other-project div a i:hover{
+    color:var(--green);
 }
 
 .other-project h4{
@@ -589,6 +624,25 @@
 @media(max-width:375px){
     .section-container{
         max-width: 250px;
+    }
+
+    .about-container{
+        margin-top:60px;
+    }
+
+    .about-image-container img{
+        max-width:400px;
+        width:100%;
+        border-radius:8px;
+        margin-top:60px;
+    }
+
+    .about-text-container{
+        justify-content:space-between;
+    }
+
+    .about-text-container h4{
+        margin-top:10px;
     }
 
     .about-items-container{
